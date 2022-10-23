@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'jost-regular';
+  src: url('/fonts/Jost-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'jost-bold';
+  src: url('/fonts/Jost-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'jost-extra-bold';
+  src: url('/fonts/Jost-ExtraBold.ttf');
+}

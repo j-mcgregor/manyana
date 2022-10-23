@@ -1,0 +1,49 @@
+{
+  "landing": {
+    "landing_main": "Delivering data-driven services to win the online shopper",
+    "landing_description": "We are manyanaLabs, a data-driven eCommerce powehouse with strategic advisory capabilities. As an agile oriented eCommerce company. We serve global enterprises and help build online sales for brands. We provide measurable results through performance-based custom strategies tailored to your needs.\nAt manyanaLabs, we create tailor-made strategies based on your requirements, the market's intricacies, and your ideas! But most of all, we live and breathe DATA. Result? We let you realise your potential and expand your digital footprint.",
+    "stats": {
+      "title": "manyanaLabs is a fast growing Hybrid eCommerce Transformation Adisory",
+      "summary": "Combining a wide range of managed Content services with fluency in eCommerce analytics and syndication technology to deliver for large global enterprises.",
+      "offices": {
+        "text": "offices",
+        "bubble": "3+"
+      },
+      "countries": {
+        "text": "countries",
+        "bubble": "70+"
+      },
+      "team_members": {
+        "text": "team members",
+        "bubble": "100+"
+      },
+      "languages": {
+        "text": "languages",
+        "bubble": "20+"
+      },
+      "eRetailers": {
+        "text": "e-retailers",
+        "bubble": "1000+"
+      }
+    },
+    "services": {
+      "cta": "Other Services and Tools"
+    },
+    "contact": {
+      "contact_us": "contact us",
+      "title": "schedule a meeting",
+      "summary": "Fill this form to get in contact with one of our <expert>Experts</expert>",
+      "full_name_label": "Full Name",
+      "full_name_placeholder": "John Doe",
+      "work_email_label": "Work Email",
+      "work_email_placeholder": "example@company.com",
+      "phone_label": "Phone Number",
+      "phone_placeholder": "0123456789",
+      "submit": "Submit",
+      "submission_success_title": "Success!",
+      "submission_success_message": "Thanks for getting in touch, we aim to reply within 24 hours",
+      "submission_error_title": "Oops! Something went wrong",
+      "submission_error_message": "Please make sure your details are correct. Otherwise please contact support"
+    }
+  }
+}
