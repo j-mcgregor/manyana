@@ -9,7 +9,6 @@ import { ReactNode, useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 
 import { Layout } from '../components/layout/Layout';
-import { useLogos } from '../hooks/useLogos';
 
 export interface ContactForm {
   fullName: string;
