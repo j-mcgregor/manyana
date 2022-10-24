@@ -5,10 +5,11 @@ import { hasCookie } from 'cookies-next';
 import { GetStaticProps } from 'next';
 import { useTranslations } from 'next-intl';
 import Head from 'next/head';
-import { ReactNode, useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 
 import { Layout } from '../components/layout/Layout';
+import { Home } from '../components/pages/Home';
 
 export interface ContactForm {
   fullName: string;
@@ -16,7 +17,7 @@ export interface ContactForm {
   phone: string;
 }
 
-export default function Home() {
+export default function Homepage() {
   const t = useTranslations();
 
   const { register, handleSubmit, formState } = useForm<ContactForm>();
@@ -63,6 +64,7 @@ export default function Home() {
       <Head>
         <title>Home</title>
       </Head>
+      <Home />
     </Layout>
   );
 }

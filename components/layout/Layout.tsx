@@ -10,11 +10,12 @@ export interface LayoutProps {
 
 export const Layout: FC<LayoutProps> = ({ children }) => {
   return (
-    <>
+    <div className="min-h-screen h-full w-full grid grid-cols-layout bg-seashell bg-[url('/images/hexagons.svg')] bg-repeat bg-contain bg-fixed">
       <Navbar />
+      <div></div>
       <div className="text-center">{children}</div>
-      <Footer />
-      <CookieBanner />
-    </>
+      {/* <Footer />
+      <CookieBanner /> */}
+    </div>
   );
 };

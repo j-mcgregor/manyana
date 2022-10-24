@@ -12,16 +12,32 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        link: '#983A5D'
+        link: '#983A5D',
+        black: '#010101',
+        'dark-violet': '#221C2B',
+        'light-violet': '#69526D',
+        puce: '#C58193',
+        apricot: '#FEBC6A',
+        'blue-purple': '#B4B6F5',
+        lavender: '#CEC6E7',
+        seashell: '#FAF1EC'
       },
       zIndex: {
         front: 99999
+      },
+      gridTemplateColumns: {
+        layout: '150px 1fr'
       }
     },
     fontFamily: {
       'jost-regular': ['jost-regular'],
       'jost-bold': ['jost-bold'],
-      'jost-extra-bold': ['jost-extra-bold']
+      'jost-extra-bold': ['jost-extra-bold'],
+      koulen: ['koulen-regular'],
+      'roboto-light': ['roboto-slab-light'],
+      'roboto-thin': ['roboto-slab-thin'],
+      'roboto-bold': ['roboto-slab-bold'],
+      'roboto-regular': ['roboto-slab-regular']
     }
   },
   plugins: [

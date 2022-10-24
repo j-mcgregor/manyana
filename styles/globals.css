@@ -16,3 +16,56 @@
   font-family: 'jost-extra-bold';
   src: url('/fonts/Jost-ExtraBold.ttf');
 }
+
+@font-face {
+  font-family: 'koulen-regular';
+  src: url('/fonts/Koulen-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'roboto-slab-thin';
+  src: url('/fonts/RobotoSlab-Thin.ttf');
+}
+
+@font-face {
+  font-family: 'roboto-slab-regular';
+  src: url('/fonts/RobotoSlab-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'roboto-slab-light';
+  src: url('/fonts/RobotoSlab-Light.ttf');
+}
+
+@font-face {
+  font-family: 'roboto-slab-bold';
+  src: url('/fonts/RobotoSlab-Bold.ttf');
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+#showcase-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+#showcase-scroll {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.fade-box {
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 10%,
+    black 20%,
+    black 80%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 10%,
+    black 20%,
+    black 80%,
+    transparent 100%
+  );
+}
