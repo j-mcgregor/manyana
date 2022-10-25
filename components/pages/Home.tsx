@@ -1,18 +1,13 @@
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable no-console */
 /* eslint-disable sonarjs/no-duplicate-string */
-import React, { FC, useEffect, useState } from 'react';
-import { useForm } from 'react-hook-form';
+import classNames from 'classnames';
 import { hasCookie } from 'cookies-next';
 import { useTranslations } from 'next-intl';
-import classNames from 'classnames';
+import React, { FC, useEffect, useState } from 'react';
+import { useForm } from 'react-hook-form';
 import { Background, Parallax } from 'react-parallax';
-import {
-  Link as ScrollLink,
-  Element,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
-  scroller
-} from 'react-scroll';
+import { Element, Events } from 'react-scroll';
 
 export interface ContactForm {
   fullName: string;
