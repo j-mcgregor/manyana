@@ -39,6 +39,8 @@
       "work_email_placeholder": "example@company.com",
       "phone_label": "Phone Number",
       "phone_placeholder": "0123456789",
+      "message_label": "Message",
+      "message_placeholder": "Your message here",
       "submit": "Submit",
       "submission_success_title": "Success!",
       "submission_success_message": "Thanks for getting in touch, we aim to reply within 24 hours",

@@ -20,7 +20,8 @@ module.exports = {
         apricot: '#FEBC6A',
         'blue-purple': '#B4B6F5',
         lavender: '#CEC6E7',
-        seashell: '#FAF1EC'
+        seashell: '#FAF1EC',
+        'light-seashell': '#faf5f2'
       },
       zIndex: {
         front: 99999

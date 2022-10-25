@@ -5,11 +5,18 @@ import { Menu } from '@headlessui/react';
 import classNames from 'classnames';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React, { FC, ReactNode, useEffect, useState } from 'react';
 import { BsChevronDown } from 'react-icons/bs';
 import { VscGlobe, VscThreeBars } from 'react-icons/vsc';
+import {
+  Link,
+  Element,
+  Events,
+  animateScroll as scroll,
+  scrollSpy,
+  scroller
+} from 'react-scroll';
 
 import { useScrollPosition } from '../../hooks/useScrollPosition';
 
@@ -24,18 +31,23 @@ export const Navbar: FC = () => {
   const navLinks: Array<{ label: ReactNode; href: string; active: boolean }> = [
     {
       label: t('nav.about'),
-      href: '#about',
+      href: 'about',
       active: router.asPath.includes('about')
     },
     {
       label: t('nav.services'),
-      href: '#services',
+      href: 'services',
       active: router.asPath.includes('#services')
     },
     {
-      label: t('nav.clients'),
-      href: '#clients',
-      active: router.asPath.includes('#clients')
+      label: t('nav.showcase'),
+      href: 'showcase',
+      active: router.asPath.includes('#showcase')
+    },
+    {
+      label: t('nav.contact'),
+      href: 'contact',
+      active: router.asPath.includes('#contact')
     }
   ];
 
@@ -53,11 +65,19 @@ export const Navbar: FC = () => {
       >
         {navLinks.map((nav, i) => {
           return (
-            <Link href={nav.href} key={`nav-link-${i}`}>
+            <Link
+              to={nav.href}
+              key={`nav-link-${i}`}
+              spy={true}
+              smooth={true}
+              duration={500}
+              activeClass="text-link"
+              className="text-apricot"
+            >
               <span
                 className={classNames(
-                  'no-underline w-full cursor-pointer hover:text-[#086370] lowercase',
-                  nav.active ? 'text-link' : 'text-apricot'
+                  'no-underline w-full cursor-pointer hover:text-[#086370] lowercase'
+                  // nav.active ? '' : 'text-apricot'
                 )}
               >
                 {nav.label}
@@ -91,7 +111,7 @@ export const Navbar: FC = () => {
           <Menu.Items className="focus:outline-none">
             <div className="px-1 py-1 flex flex-col">
               {navLinks.map((nav, i) => (
-                <Link href={nav.href} key={`nav-link-${i}`}>
+                <Link to={nav.href} key={`nav-link-${i}`}>
                   <span
                     className={classNames(
                       'no-underline px-1 cursor-pointer hover:text-[#086370] lowercase py-2 w-full text-right',
