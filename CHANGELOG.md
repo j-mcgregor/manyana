@@ -1,3 +1,10 @@
+# 1.0.0 (2022-10-25)
+
+
+### Features
+
+* 🎸 parallax and smooth scroll among others ([1714450](https://github.com/j-mcgregor/manyana/commit/1714450008ef93c73049632dd2e61dde05c87731))
+
 # 1.0.0 (2022-09-20)
 
 
