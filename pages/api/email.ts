@@ -1,9 +1,8 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import fetch from 'node-fetch';
 import { hasCookie } from 'cookies-next';
-import type { NextApiHandler } from 'next';
-import hubspot_key from '../../hubspot_key.json';
+import fetch from 'node-fetch';
 
+import type { NextApiHandler } from 'next';
 const emailHandler: NextApiHandler = async (req, res) => {
   if (req.method !== 'POST')
     return res.status(503).send('Method not supported');
@@ -25,10 +24,14 @@ const emailHandler: NextApiHandler = async (req, res) => {
         {
           name: 'phone',
           value: req.body?.phone
+        },
+        {
+          name: 'message',
+          value: req.body?.message
         }
       ],
       context: {
-        pageUri: 'manyanalabs.com#section-contact',
+        pageUri: 'manyana.io#context',
         pageName: 'Homepage'
       },
       legalConsentOptions: {
@@ -42,17 +45,17 @@ const emailHandler: NextApiHandler = async (req, res) => {
       }
     };
 
-    const url = `https://api.hsforms.com/submissions/v3/integration/secure/submit/${hubspot_key.portal_id}/${hubspot_key.form_id}`;
+    const url = `https://formspree.io/f/mnqrgzzk`;
 
     const response = await fetch(url, {
       method: 'POST',
       body: JSON.stringify(formData),
       headers: {
-        'Content-Type': 'application/json',
-        // prettier-ignore
-        'Authorization': `Bearer ${hubspot_key.api_key}`
+        'Content-Type': 'application/json'
       }
     });
+
+    console.log(response.ok);
 
     if (!response.ok) {
       return res
