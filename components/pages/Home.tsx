@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-console */
 /* eslint-disable sonarjs/no-duplicate-string */
@@ -57,46 +58,28 @@ export const Home = () => {
     }
   });
 
-  useEffect(() => {
-    Events.scrollEvent.register('begin', function () {
-      console.log('begin', arguments);
-    });
-
-    Events.scrollEvent.register('end', function () {
-      console.log('end', arguments);
-    });
-
-    return () => {
-      Events.scrollEvent.remove('begin');
-      Events.scrollEvent.remove('end');
-    };
-  }, []);
-
   return (
     <div className="">
-      <div className="h-screen w-full flex flex-row">
+      <div className="h-screen w-full flex flex-row ">
         <div className="w-1/2 flex flex-col items-start justify-center p-20">
           <div className="text-4xl font-jost-bold text-puce">This is</div>
           <div className="text-[8em] font-koulen text-left leading-tight text-dark-violet">
             Manyana <span className="text-apricot">Dev</span>.
           </div>
         </div>
-        <div className="w-1/2 flex flex-col items-center justify-center p-20">
+        <div className="w-1/2 flex flex-col items-center justify-center relative">
           <Parallax
-            // bgImage={image4}
             strength={200}
             renderLayer={percentage => (
-              <div>
-                <div className="h-full w-full">
-                  <Image
-                    alt="monkey"
-                    src="/images/monkey.svg"
-                    layout="fixed"
-                    height={percentage * 300}
-                    width={percentage * 300}
-                    className="-apricot"
-                  />
-                </div>
+              <div className="relative h-full w-full">
+                <img
+                  alt="monkey"
+                  src="/images/monkey.svg"
+                  style={{
+                    height: percentage * 300,
+                    width: percentage * 300
+                  }}
+                />
               </div>
             )}
           ></Parallax>
