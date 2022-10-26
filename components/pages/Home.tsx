@@ -8,7 +8,7 @@ import React, { FC, useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Background, Parallax } from 'react-parallax';
 import { Element, Events } from 'react-scroll';
-
+import Image from 'next/image';
 export interface ContactForm {
   fullName: string;
   email: string;
@@ -80,6 +80,26 @@ export const Home = () => {
           <div className="text-[8em] font-koulen text-left leading-tight text-dark-violet">
             Manyana <span className="text-apricot">Dev</span>.
           </div>
+        </div>
+        <div className="w-1/2 flex flex-col items-center justify-center p-20">
+          <Parallax
+            // bgImage={image4}
+            strength={200}
+            renderLayer={percentage => (
+              <div>
+                <div className="h-full w-full">
+                  <Image
+                    alt="monkey"
+                    src="/images/monkey.svg"
+                    layout="fixed"
+                    height={percentage * 300}
+                    width={percentage * 300}
+                    className="-apricot"
+                  />
+                </div>
+              </div>
+            )}
+          ></Parallax>
         </div>
       </div>
 
