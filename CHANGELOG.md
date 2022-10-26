@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/j-mcgregor/manyana/compare/v1.0.0...v1.0.1) (2022-10-25)
+
+
+### Bug Fixes
+
+* 🐛 lint-fixes ([a827f2d](https://github.com/j-mcgregor/manyana/commit/a827f2d34e2b39f6a63aa6dba588ab9d5a323532))
+
 # 1.0.0 (2022-10-25)
 
 
