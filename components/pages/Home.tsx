@@ -5,11 +5,11 @@
 import classNames from 'classnames';
 import { hasCookie } from 'cookies-next';
 import { useTranslations } from 'next-intl';
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Background, Parallax } from 'react-parallax';
-import { Element, Events } from 'react-scroll';
-import Image from 'next/image';
+import { Element } from 'react-scroll';
+
 export interface ContactForm {
   fullName: string;
   email: string;
@@ -59,15 +59,17 @@ export const Home = () => {
   });
 
   return (
-    <div className="">
-      <div className="h-screen w-full flex flex-row ">
-        <div className="w-1/2 flex flex-col items-start justify-center p-20">
-          <div className="text-4xl font-jost-bold text-puce">This is</div>
-          <div className="text-[8em] font-koulen text-left leading-tight text-dark-violet">
+    <div className="w-full">
+      <div className="h-full md:h-screen w-full flex flex-col md:flex-row">
+        <div className="w-full md:w-1/2 flex flex-col text-center md:text-left md:items-start justify-center p-20">
+          <div className="text-3xl md:text-4xl font-jost-bold text-puce">
+            This is
+          </div>
+          <div className="text-4xl md:text-[8em] font-koulen text-center md:text-left leading-tight text-dark-violet">
             Manyana <span className="text-apricot">Dev</span>.
           </div>
         </div>
-        <div className="w-1/2 flex flex-col items-center justify-center relative">
+        <div className="w-full md:w-1/2 hidden md:flex flex-col items-center justify-center relative">
           <Parallax
             strength={200}
             renderLayer={percentage => (
@@ -89,9 +91,10 @@ export const Home = () => {
       {/* ============================ */}
       {/* ABOUT ====================== */}
       {/* ============================ */}
+
       <Element name="about" />
       <Parallax strength={300}>
-        <Background className="custom-bg">
+        <Background className="custom-bg w-full">
           <div
             className="bg-[url('/images/endless-clouds.svg')] bg-black bg-no-repeat bg-cover"
             style={{
@@ -100,16 +103,16 @@ export const Home = () => {
             }}
           />
         </Background>
-        <div className="h-screen w-full flex flex-row">
-          <div className="w-1/2 flex flex-col items-end justify-center p-20 text-left">
-            <div className="text-6xl font-koulen text-left leading-tight text-apricot">
+        <div className="h-full md:min-h-screen w-full flex flex-col md:flex-row">
+          <div className="w-full md:w-1/2 flex flex-col items-end justify-center p-5 md:p-20 text-center md:text-right">
+            <div className="text-4xl md:text-6xl font-koulen leading-tight text-apricot w-full">
               About us
             </div>
-            <div className="text-4xl font-koulen leading-tight text-lavender">
+            <div className="text-2xl md:text-4xl font-koulen leading-tight text-lavender w-full">
               The what, how and why
             </div>
           </div>
-          <div className="w-1/2 flex flex-col items-start justify-center p-20 text-left text-seashell">
+          <div className="w-full md:w-1/2 flex flex-col items-start justify-center p-5 md:p-20 text-left text-seashell">
             <div className="space-y-10">
               <div>
                 Manyana Dev strives on delivering quality software for your
@@ -143,9 +146,10 @@ export const Home = () => {
       {/* ============================ */}
       {/* SERVICES =================== */}
       {/* ============================ */}
+
       <Element name="services" />
       <Parallax strength={300}>
-        <Background className="custom-bg">
+        <Background className="custom-bg w-full">
           <div
             className="bg-[url('/images/circuit-board.svg')] bg-light-seashell"
             style={{
@@ -155,19 +159,19 @@ export const Home = () => {
           />
         </Background>
 
-        <div className="h-screen w-full flex flex-row">
-          <div className="w-1/2 flex flex-col items-end justify-center p-20 text-left">
-            <div className="text-6xl font-koulen text-left leading-tight text-apricot">
+        <div className="h-full md:min-h-screen w-full flex flex-col md:flex-row">
+          <div className="w-full md:w-1/2 flex flex-col items-end justify-center p-5 md:p-20 text-center md:text-right">
+            <div className="text-4xl md:text-6xl font-koulen text-center md:text-right leading-tight text-apricot w-full">
               Our Services
             </div>
-            <div className="text-4xl font-koulen leading-tight text-light-violet">
+            <div className="text-2xl md:text-4xl font-koulen leading-tight text-light-violet w-full">
               How we can help shape your ideas
             </div>
           </div>
-          <div className="w-1/2 flex flex-col items-end justify-center p-20 text-left">
-            <div className="space-y-10 ">
+          <div className="w-full md:w-1/2 flex flex-col items-end justify-center p-5 md:p-20 text-left">
+            <div className="space-y-10">
               <div>
-                <div className="text-light-violet text-2xl uppercase font-roboto-bold">
+                <div className="text-light-violet text-lg md:text-2xl uppercase font-roboto-bold">
                   Product planning & management
                 </div>
                 <div className="font-roboto-light">
@@ -178,7 +182,7 @@ export const Home = () => {
                 </div>
               </div>
               <div>
-                <div className="text-light-violet text-2xl uppercase font-roboto-bold">
+                <div className="text-light-violet text-lg md:text-2xl uppercase font-roboto-bold">
                   UX/UI Design
                 </div>
                 <div className="font-roboto-light">
@@ -189,7 +193,7 @@ export const Home = () => {
                 </div>
               </div>
               <div>
-                <div className="text-light-violet text-2xl uppercase font-roboto-bold">
+                <div className="text-light-violet text-lg md:text-2xl uppercase font-roboto-bold">
                   Development and testing
                 </div>
                 <div className="font-roboto-light">
@@ -200,7 +204,7 @@ export const Home = () => {
                 </div>
               </div>
               <div>
-                <div className="text-light-violet text-2xl uppercase font-roboto-bold">
+                <div className="text-light-violet text-lg md:text-2xl uppercase font-roboto-bold">
                   Hosting and retainer
                 </div>
                 <div className="font-roboto-light">
@@ -218,19 +222,20 @@ export const Home = () => {
       {/* ============================ */}
       {/* SHOWCASE =================== */}
       {/* ============================ */}
+
       <Element name="showcase" />
-      <div className="h-screen w-full flex flex-row">
-        <div className="w-1/2 flex flex-col items-end text-right justify-center p-20">
-          <div className="text-6xl font-koulen text-left leading-tight text-apricot">
+      <div className="h-full md:h-screen w-full flex flex-col md:flex-row">
+        <div className="w-full md:w-1/2 flex flex-col items-start justify-center p-5 md:p-20 text-center md:text-right">
+          <div className="text-4xl md:text-6xl font-koulen leading-tight text-apricot w-full">
             Showcase
           </div>
-          <div className="text-4xl font-koulen leading-tight text-light-violet">
+          <div className="text-2xl md:text-4xl font-koulen leading-tight text-light-violet w-full">
             Contracting, consultation and from scratch
           </div>
         </div>
-        <div className="w-1/2 h-full flex flex-col items-start justify-center px-20 text-left ">
+        <div className="w-full md:w-1/2 h-full flex flex-col items-start justify-center px-4 md:px-20 text-left">
           <div
-            className="space-y-10 h-4/5 flex flex-col items-start justify-start overflow-y-scroll relative fade-box py-40"
+            className="space-y-10 h-auto md:h-4/5 w-full flex flex-col items-center justify-center overflow-y-scroll relative fade-box py-10 md:py-40"
             id="showcase-scroll"
           >
             <ShowcaseCard
@@ -302,7 +307,7 @@ export const Home = () => {
       {/* ============================ */}
       <Element name="contact" />
       <Parallax strength={500}>
-        <Background className="custom-bg">
+        <Background className="custom-bg w-full">
           <div
             className="bg-[url('/images/temple.svg')] bg-dark-violet"
             style={{
@@ -311,128 +316,126 @@ export const Home = () => {
             }}
           />
         </Background>
-        <div className="h-screen w-full flex flex-row">
-          <div className="w-1/2 flex flex-col items-end justify-center p-20 text-left">
-            <div className="text-6xl font-koulen text-left leading-tight text-apricot">
+        <div className="h-full md:h-screen w-full flex flex-col md:flex-row">
+          <div className="w-full md:w-1/2 flex flex-col items-center md:items-end justify-center p-5 md:p-20 text-center md:text-right">
+            <div className="text-4xl md:text-6xl font-koulen leading-tight text-apricot">
               Get in touch
             </div>
-            <div className="text-4xl font-koulen leading-tight text-lavender">
+            <div className="text-2xl md:text-4xl font-koulen leading-tight text-lavender">
               Contact us to set up a consultation
             </div>
           </div>
-          <div className="w-1/2 flex flex-col items-end justify-center p-20 text-left">
+          <div className="w-full md:w-1/2 flex flex-col items-end justify-center p-5 md:p-20 text-left">
             <div className="w-full h-full bg-light-seashell flex items-center justify-center shadow-lg rounded-md">
               <form
-                className="w-full lg:w-3/5 flex flex-col items-start justify-between px-4 gap-y-10 font-roboto-regular"
+                className="w-full h-full flex flex-col items-start justify-between px-5 md:px-10 py-10 md:py-20 font-roboto-regular"
                 onSubmit={handleFormSubmit}
               >
-                <div className="flex flex-col relative w-full">
-                  <label htmlFor="full_name" className="flex flex-col w-full">
-                    <span
-                      className={classNames(
-                        'text-xs bg-light-seashell absolute top-0 left-5 -translate-y-[7px] px-1',
-                        formState.errors.fullName && 'text-red-600'
-                      )}
-                    >
-                      {t('landing.contact.full_name_label')}
-                    </span>
-                    <input
-                      {...register('fullName', {
-                        required: true
-                      })}
-                      type="text"
-                      id="fullName"
-                      placeholder={t('landing.contact.full_name_placeholder')}
-                      className={classNames(
-                        'border-[1px] border-black rounded-md w-full px-5 py-4 font-jost-regular focus:outline-blue-purple focus:border-apricot bg-light-seashell',
-                        formState.errors.fullName &&
-                          'border-red-600 text-red-600'
-                      )}
-                    />
-                  </label>
-                </div>
-                <div className="flex flex-col relative w-full">
-                  <label htmlFor="full_name" className="flex flex-col w-full">
-                    <span
-                      className={classNames(
-                        'text-xs bg-light-seashell absolute top-0 left-5 -translate-y-[7px] px-1',
-                        formState.errors.email && 'text-red-600'
-                      )}
-                    >
-                      {t('landing.contact.work_email_label')}
-                    </span>
-                    <input
-                      type="email"
-                      {...register('email', {
-                        required: true
-                      })}
-                      id="email"
-                      placeholder={t('landing.contact.work_email_placeholder')}
-                      className={classNames(
-                        'border-[1px] border-black rounded-md w-full px-5 py-4 font-jost-regular focus:outline-blue-purple focus:border-apricot bg-light-seashell',
-                        formState.errors.email && 'border-red-600 text-red-600'
-                      )}
-                    />
-                  </label>
-                </div>
-                <div className="flex flex-col relative w-full">
-                  <label htmlFor="full_name" className="flex flex-col w-full">
-                    <span
-                      className={classNames(
-                        'text-xs bg-light-seashell absolute top-0 left-5 -translate-y-[7px] px-1',
-                        formState.errors.phone && 'text-red-600'
-                      )}
-                    >
-                      {t('landing.contact.phone_label')}
-                    </span>
-                    <input
-                      type="text"
-                      {...register('phone', {
-                        required: true
-                      })}
-                      id="phone"
-                      placeholder={t('landing.contact.phone_placeholder')}
-                      className={classNames(
-                        'border-[1px] border-black rounded-md w-full px-5 py-4 font-jost-regular focus:outline-blue-purple focus:border-apricot bg-light-seashell',
-                        formState.errors.phone && 'border-red-600 text-red-600'
-                      )}
-                    />
-                  </label>
-                </div>
-                <div className="flex flex-col relative w-full">
-                  <label htmlFor="full_name" className="flex flex-col w-full">
-                    <span
-                      className={classNames(
-                        'text-xs bg-light-seashell absolute top-0 left-5 -translate-y-[7px] px-1',
-                        formState.errors.phone && 'text-red-600'
-                      )}
-                    >
-                      {t('landing.contact.message_label')}
-                    </span>
-                    <textarea
-                      {...register('message', {
-                        required: true
-                      })}
-                      id="message"
-                      placeholder={t('landing.contact.message_placeholder')}
-                      className={classNames(
-                        'border-[1px] border-black rounded-md w-full px-5 py-4 font-jost-regular focus:outline-blue-purple focus:border-apricot bg-light-seashell',
-                        formState.errors.phone && 'border-red-600 text-red-600'
-                      )}
-                    />
-                  </label>
-                </div>
-                <div className="flex items-start justify-center">
-                  <button
-                    className={classNames(
-                      'flex items-center justify-center bg-dark-violet text-apricot disabled:text-gray-600 text-xl border-[1px] disabled:border-gray-300 w-40 h-12 rounded-full disabled:bg-gray-300 hover:disabled:bg-gray-300 hover:bg-apricot hover:text-dark-violet cursor-pointer font-roboto-bold duration-100'
-                    )}
-                  >
-                    {t('landing.contact.submit')}
-                  </button>
+                <div className="w-full flex flex-col space-y-5 items-center justify-center">
+                  <div className="flex flex-col relative w-full">
+                    <label htmlFor="full_name" className="flex flex-col w-full">
+                      <span
+                        className={classNames(
+                          'text-xs bg-light-seashell absolute top-0 left-5 -translate-y-[7px] px-1',
+                          formState.errors.fullName && 'text-red-600'
+                        )}
+                      >
+                        {t('landing.contact.full_name_label')}
+                      </span>
+                      <input
+                        {...register('fullName', {
+                          required: true
+                        })}
+                        type="text"
+                        id="fullName"
+                        placeholder={t('landing.contact.full_name_placeholder')}
+                        className={classNames(
+                          'border-[1px] border-black rounded-md w-full px-5 py-4 font-jost-regular focus:outline-blue-purple focus:border-apricot bg-light-seashell',
+                          formState.errors.fullName &&
+                            'border-red-600 text-red-600'
+                        )}
+                      />
+                    </label>
+                  </div>
+                  <div className="flex flex-col relative w-full">
+                    <label htmlFor="full_name" className="flex flex-col w-full">
+                      <span
+                        className={classNames(
+                          'text-xs bg-light-seashell absolute top-0 left-5 -translate-y-[7px] px-1',
+                          formState.errors.email && 'text-red-600'
+                        )}
+                      >
+                        {t('landing.contact.work_email_label')}
+                      </span>
+                      <input
+                        type="email"
+                        {...register('email', {
+                          required: true
+                        })}
+                        id="email"
+                        placeholder={t(
+                          'landing.contact.work_email_placeholder'
+                        )}
+                        className={classNames(
+                          'border-[1px] border-black rounded-md w-full px-5 py-4 font-jost-regular focus:outline-blue-purple focus:border-apricot bg-light-seashell',
+                          formState.errors.email &&
+                            'border-red-600 text-red-600'
+                        )}
+                      />
+                    </label>
+                  </div>
+                  <div className="flex flex-col relative w-full">
+                    <label htmlFor="full_name" className="flex flex-col w-full">
+                      <span
+                        className={classNames(
+                          'text-xs bg-light-seashell absolute top-0 left-5 -translate-y-[7px] px-1',
+                          formState.errors.phone && 'text-red-600'
+                        )}
+                      >
+                        {t('landing.contact.phone_label')}
+                      </span>
+                      <input
+                        type="text"
+                        {...register('phone', {
+                          required: true
+                        })}
+                        id="phone"
+                        placeholder={t('landing.contact.phone_placeholder')}
+                        className={classNames(
+                          'border-[1px] border-black rounded-md w-full px-5 py-4 font-jost-regular focus:outline-blue-purple focus:border-apricot bg-light-seashell',
+                          formState.errors.phone &&
+                            'border-red-600 text-red-600'
+                        )}
+                      />
+                    </label>
+                  </div>
+                  <div className="flex flex-col relative w-full">
+                    <label htmlFor="full_name" className="flex flex-col w-full">
+                      <span
+                        className={classNames(
+                          'text-xs bg-light-seashell absolute top-0 left-5 -translate-y-[7px] px-1',
+                          formState.errors.phone && 'text-red-600'
+                        )}
+                      >
+                        {t('landing.contact.message_label')}
+                      </span>
+                      <textarea
+                        {...register('message', {
+                          required: true
+                        })}
+                        id="message"
+                        placeholder={t('landing.contact.message_placeholder')}
+                        className={classNames(
+                          'border-[1px] border-black rounded-md w-full px-5 py-4 font-jost-regular focus:outline-blue-purple focus:border-apricot bg-light-seashell',
+                          formState.errors.phone &&
+                            'border-red-600 text-red-600'
+                        )}
+                      />
+                    </label>
+                  </div>
                 </div>
                 <div className="flex items-start justify-center">
-                  {message?.message && (
+                  {message?.message ? (
                     <div
                       className={classNames(
                         'text-left',
@@ -446,6 +449,14 @@ export const Home = () => {
                       </div>
                       <div className="text-sm">{message.message}</div>
                     </div>
+                  ) : (
+                    <button
+                      className={classNames(
+                        'flex items-center justify-center bg-dark-violet text-apricot disabled:text-gray-600 text-xl border-[1px] disabled:border-gray-300 w-40 h-12 rounded-full disabled:bg-gray-300 hover:disabled:bg-gray-300 hover:bg-apricot hover:text-dark-violet cursor-pointer font-roboto-bold duration-100 mt-5'
+                      )}
+                    >
+                      {t('landing.contact.submit')}
+                    </button>
                   )}
                 </div>
               </form>
@@ -466,7 +477,7 @@ export const ShowcaseCard: FC<{
   href: string;
 }> = ({ title, type, description, href }) => {
   return (
-    <div>
+    <div className="w-full text-left md:text-center">
       <a
         href={href}
         target="_blank"

@@ -12,25 +12,13 @@ const emailHandler: NextApiHandler = async (req, res) => {
 
   try {
     const formData = {
-      submittedAt: Date.now().toString(),
-      fields: [
-        {
-          name: 'fullname',
-          value: req.body?.fullName
-        },
-        {
-          name: 'email',
-          value: req.body?.email
-        },
-        {
-          name: 'phone',
-          value: req.body?.phone
-        },
-        {
-          name: 'message',
-          value: req.body?.message
-        }
-      ],
+      submittedAt: new Date(Date.now()).toString(),
+      fields: {
+        fullName: req.body?.fullName,
+        email: req.body?.email,
+        phone: req.body?.phone,
+        message: req.body?.message
+      },
       context: {
         pageUri: 'manyana.io#context',
         pageName: 'Homepage'

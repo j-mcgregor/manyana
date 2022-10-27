@@ -52,17 +52,9 @@ export const Navbar: FC = () => {
   ];
 
   return (
-    <div
-      className={classNames(
-        'w-[150px] h-full flex flex-row lg:flex-col lg:items-center justify-between relative z-[999] font-jost-bold bg-dark-violet shadow-2xl text-lg lg:fixed'
-      )}
-    >
-      {/* links:lg */}
-      <div
-        className={classNames(
-          'hidden lg:flex flex-col items-start justify-center w-full h-full px-5 py-2 space-y-10'
-        )}
-      >
+    <div className="w-full sm:w-[150px] h-12 sm:h-full flex flex-row sm:flex-col sm:items-center justify-between z-[999] font-jost-bold bg-dark-violet shadow-2xl text-sm fixed">
+      {/* links:sm */}
+      <div className="hidden sm:flex flex-col items-start justify-center w-full h-full px-5 py-2 space-y-10">
         {navLinks.map((nav, i) => {
           return (
             <Link
@@ -88,33 +80,27 @@ export const Navbar: FC = () => {
       </div>
 
       {/* links:mobile */}
-      <div className="lg:hidden">
+      <div className="sm:hidden w-full">
         <Menu
           as="div"
-          className={classNames(
-            'relative inline-block text-left w-full bg-black h-full p-2 text-white'
-          )}
+          className="relative inline-block text-left w-full h-full text-white"
           id="nav-menu"
         >
-          <div className="flex justify-between items-center w-full">
-            <div className="relative h-8 w-32">
-              <Image
-                src="/images/logo/logo-white.svg"
-                layout="fill"
-                alt="logo"
-              />
+          <div className="flex justify-between items-center w-full p-2 bg-dark-violet">
+            <div className="relative h-8 w-8">
+              <Image src="/images/logo-white.png" layout="fill" alt="logo" />
             </div>
             <Menu.Button as="div" className="cursor-pointer">
               <VscThreeBars size={30} />
             </Menu.Button>
           </div>
-          <Menu.Items className="focus:outline-none">
-            <div className="px-1 py-1 flex flex-col">
+          <Menu.Items className="focus:outline-none bg-dark-violet">
+            <div className="px-1 py-1 flex flex-col space-y-5">
               {navLinks.map((nav, i) => (
                 <Link to={nav.href} key={`nav-link-${i}`}>
                   <span
                     className={classNames(
-                      'no-underline px-1 cursor-pointer hover:text-[#086370] lowercase py-2 w-full text-right',
+                      'no-underline px-1 cursor-pointer hover:text-[#086370] lowercase w-full text-right',
                       nav.active && 'text-link'
                     )}
                   >

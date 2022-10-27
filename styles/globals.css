@@ -53,19 +53,21 @@
   scrollbar-width: none; /* Firefox */
 }
 
-.fade-box {
-  -webkit-mask-image: linear-gradient(
-    to bottom,
-    transparent 10%,
-    black 20%,
-    black 80%,
-    transparent 100%
-  );
-  mask-image: linear-gradient(
-    to bottom,
-    transparent 10%,
-    black 20%,
-    black 80%,
-    transparent 100%
-  );
+@media (min-width: 960px) {
+  .fade-box {
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      transparent 10%,
+      black 20%,
+      black 80%,
+      transparent 100%
+    );
+    mask-image: linear-gradient(
+      to bottom,
+      transparent 10%,
+      black 20%,
+      black 80%,
+      transparent 100%
+    );
+  }
 }
