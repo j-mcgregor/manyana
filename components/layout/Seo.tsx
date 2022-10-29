@@ -25,7 +25,94 @@ const Seo = ({ title, description, article, path }: SEOProps) => {
       <title>{metaTitle}</title>
       <meta name="description" content={metaDescription} />
       <meta name="keyword" property="contracting" />
-
+      <meta name="keyword" property="graphic design" content="graphic design" />
+      <meta name="keyword" property="web design" content="web design" />
+      <meta name="keyword" property="website design" content="website design" />
+      <meta
+        name="keyword"
+        property="website builder"
+        content="website builder"
+      />
+      <meta name="keyword" property="web developer" content="web developer" />
+      <meta name="keyword" property="web designer" content="web designer" />
+      <meta name="keyword" property="webdesign" content="webdesign" />
+      <meta
+        name="keyword"
+        property="ecommerce website"
+        content="ecommerce website"
+      />
+      <meta
+        name="keyword"
+        property="web design company"
+        content="web design company"
+      />
+      <meta
+        name="keyword"
+        property="website creator"
+        content="website creator"
+      />
+      <meta
+        name="keyword"
+        property="website designer"
+        content="website designer"
+      />
+      <meta
+        name="keyword"
+        property="responsive web design"
+        content="responsive web design"
+      />
+      <meta
+        name="keyword"
+        property="web development company"
+        content="web development company"
+      />
+      <meta
+        name="keyword"
+        property="best website design"
+        content="best website design"
+      />
+      <meta
+        name="keyword"
+        property="web design software"
+        content="web design software"
+      />
+      <meta
+        name="keyword"
+        property="web page design"
+        content="web page design"
+      />
+      <meta
+        name="keyword"
+        property="build a website"
+        content="build a website"
+      />
+      <meta
+        name="keyword"
+        property="web developer salary"
+        content="web developer salary"
+      />
+      <meta name="keyword" property="design website" content="design website" />
+      <meta
+        name="keyword"
+        property="web design courses"
+        content="web design courses"
+      />
+      <meta
+        name="keyword"
+        property="how to design a website"
+        content="how to design a website"
+      />
+      <meta
+        name="keyword"
+        property="web design inspiration"
+        content="web design inspiration"
+      />
+      <meta name="keyword" property="website layout" content="website layout" />
+      <meta
+        name="keyword"
+        property="web application development"
+        content="web application development"
+      />
       {/* Facebook */}
       <meta property="og:url" content={`${config.URL}/${path}`} />
       <meta property="og:type" content={article ? `article` : `website`} />
