@@ -40,7 +40,6 @@ export const Showcase = () => {
 
   useEffect(() => {
     if (swiper?.params) {
-      console.log('Swiper instance:', swiper);
       // @ts-ignore
       swiper.params.navigation.prevEl = prevRef.current;
       // @ts-ignore
@@ -69,7 +68,6 @@ export const Showcase = () => {
           pagination={{
             clickable: true,
             renderBullet: function (index, className) {
-              console.log(className);
               return '<span class="' + className + '">' + '</span>';
             },
             currentClass: 'text-apricot'

@@ -1,8 +1,8 @@
 import React, { FC, ReactNode } from 'react';
 
 import { CookieBanner } from './CookieBanner';
-import { Footer } from './Footer';
 import { Navbar } from './Navbar';
+import Seo from './Seo';
 
 export interface LayoutProps {
   children: ReactNode;
@@ -11,11 +11,17 @@ export interface LayoutProps {
 export const Layout: FC<LayoutProps> = ({ children }) => {
   return (
     <div className="min-h-screen h-auto sm:h-full w-full grid sm:grid-cols-layout bg-seashell bg-[url('/images/hexagons.svg')] bg-repeat bg-contain bg-fixed">
+      <Seo
+        title="ManyanaDev"
+        description="Bespoke development agency for bringing your vision to life"
+        article={false}
+        path="/"
+      />
       <Navbar />
       <div></div>
       <div className="text-center w-full">{children}</div>
-      {/* <Footer />
-      <CookieBanner /> */}
+      {/* <Footer /> */}
+      <CookieBanner />
     </div>
   );
 };

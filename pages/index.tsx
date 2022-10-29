@@ -7,6 +7,7 @@ import Head from 'next/head';
 
 import { Layout } from '../components/layout/Layout';
 import { Home } from '../components/pages/Home';
+import config from '../config';
 
 export interface ContactForm {
   fullName: string;
@@ -18,7 +19,7 @@ export default function Homepage() {
   return (
     <Layout>
       <Head>
-        <title>Home</title>
+        <title>{config.title}</title>
       </Head>
       <Home />
     </Layout>

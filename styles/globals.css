@@ -5,41 +5,49 @@
 @font-face {
   font-family: 'jost-regular';
   src: url('/fonts/Jost-Regular.ttf');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'jost-bold';
   src: url('/fonts/Jost-Bold.ttf');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'jost-extra-bold';
   src: url('/fonts/Jost-ExtraBold.ttf');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'koulen-regular';
   src: url('/fonts/Koulen-Regular.ttf');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'roboto-slab-thin';
   src: url('/fonts/RobotoSlab-Thin.ttf');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'roboto-slab-regular';
   src: url('/fonts/RobotoSlab-Regular.ttf');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'roboto-slab-light';
   src: url('/fonts/RobotoSlab-Light.ttf');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'roboto-slab-bold';
   src: url('/fonts/RobotoSlab-Bold.ttf');
+  font-display: swap;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */

@@ -17,7 +17,7 @@ if (process.env.NODE_ENV === 'production') {
 const config = {
   URL,
   title: 'Manyana Dev',
-  description: 'Bringing your ideas to life',
+  description: 'Bespoke development agency to bring your vision to life',
   siteUrl: 'manyana.io',
   twitterUsername: '@manyana'
 };

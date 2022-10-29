@@ -135,7 +135,7 @@ export const Home = () => {
             </div>
           </div>
           <div className="w-full md:w-1/2 flex flex-col items-start justify-center p-5 md:p-20 text-left text-seashell">
-            <div className="space-y-10">
+            <div className="space-y-10 font-jost-regular">
               <div>
                 Manyana Dev strives on delivering quality software for your
                 business needs, ranging from e-commerce, search engine
@@ -196,7 +196,7 @@ export const Home = () => {
                 <div className="text-light-violet text-lg md:text-2xl uppercase font-roboto-bold">
                   Product planning & management
                 </div>
-                <div className="font-roboto-light">
+                <div className="font-jost-regular">
                   Manyana Dev strives on delivering quality software for your
                   business needs, ranging from e-commerce, search engine
                   optimisation, portfolios and demonstrations, marketing and
@@ -207,7 +207,7 @@ export const Home = () => {
                 <div className="text-light-violet text-lg md:text-2xl uppercase font-roboto-bold">
                   UX/UI Design
                 </div>
-                <div className="font-roboto-light">
+                <div className="font-jost-regular">
                   Manyana Dev strives on delivering quality software for your
                   business needs, ranging from e-commerce, search engine
                   optimisation, portfolios and demonstrations, marketing and
@@ -218,7 +218,7 @@ export const Home = () => {
                 <div className="text-light-violet text-lg md:text-2xl uppercase font-roboto-bold">
                   Development and testing
                 </div>
-                <div className="font-roboto-light">
+                <div className="font-jost-regular">
                   Manyana Dev strives on delivering quality software for your
                   business needs, ranging from e-commerce, search engine
                   optimisation, portfolios and demonstrations, marketing and
@@ -229,7 +229,7 @@ export const Home = () => {
                 <div className="text-light-violet text-lg md:text-2xl uppercase font-roboto-bold">
                   Hosting and retainer
                 </div>
-                <div className="font-roboto-light">
+                <div className="font-jost-regular">
                   Manyana Dev strives on delivering quality software for your
                   business needs, ranging from e-commerce, search engine
                   optimisation, portfolios and demonstrations, marketing and
@@ -274,7 +274,7 @@ export const Home = () => {
           <div className="w-full md:w-1/2 flex flex-col items-end justify-center p-5 md:p-20 text-left">
             <div className="w-full h-full bg-light-seashell flex items-center justify-center shadow-lg rounded-md">
               <form
-                className="w-full h-full flex flex-col items-start justify-between px-5 md:px-10 py-10 md:py-20 font-roboto-regular"
+                className="w-full h-full flex flex-col items-start justify-between px-5 md:px-10 py-10 md:py-20 font-jost-regular"
                 onSubmit={handleFormSubmit}
               >
                 <div className="w-full flex flex-col space-y-5 items-center justify-center">
@@ -319,7 +319,7 @@ export const Home = () => {
                           required: true
                         })}
                         type="text"
-                        id="fullName"
+                        id="contact-fullName"
                         placeholder={t('landing.contact.full_name_placeholder')}
                         className={classNames(
                           'border-[1px] border-black rounded-md w-full px-5 py-4 font-jost-regular focus:outline-blue-purple focus:border-apricot bg-light-seashell',
@@ -344,7 +344,7 @@ export const Home = () => {
                         {...register('email', {
                           required: true
                         })}
-                        id="email"
+                        id="contact-email"
                         placeholder={t(
                           'landing.contact.work_email_placeholder'
                         )}
@@ -371,7 +371,7 @@ export const Home = () => {
                         {...register('phone', {
                           required: true
                         })}
-                        id="phone"
+                        id="contact-phone"
                         placeholder={t('landing.contact.phone_placeholder')}
                         className={classNames(
                           'border-[1px] border-black rounded-md w-full px-5 py-4 font-jost-regular focus:outline-blue-purple focus:border-apricot bg-light-seashell',
@@ -395,7 +395,7 @@ export const Home = () => {
                         {...register('message', {
                           required: true
                         })}
-                        id="message"
+                        id="contact-message"
                         placeholder={t('landing.contact.message_placeholder')}
                         className={classNames(
                           'border-[1px] border-black rounded-md w-full px-5 py-4 font-jost-regular focus:outline-blue-purple focus:border-apricot bg-light-seashell',

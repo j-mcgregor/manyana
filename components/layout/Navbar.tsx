@@ -59,6 +59,7 @@ export const Navbar: FC = () => {
           return (
             <Link
               to={nav.href}
+              href={`#${nav.href}`}
               key={`nav-link-${i}`}
               spy={true}
               smooth={true}

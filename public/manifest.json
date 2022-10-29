@@ -1,0 +1,28 @@
+{
+  "short_name": "ManyanaDev",
+  "name": "ManyanaDev",
+  "icons": [
+    {
+      "src": "/images/monkey.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512"
+    },
+    {
+      "src": "/images/logo-white.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/images/logo-white.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "id": "/?source=pwa",
+  "start_url": "/?source=pwa",
+  "background_color": "#221C2B",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#FEBC6A",
+  "description": "Weather forecast inforBespoke development agency to bring your vision to lifemation"
+}
