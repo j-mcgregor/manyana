@@ -53,7 +53,7 @@ export const Navbar: FC = () => {
   ];
 
   return (
-    <div className="w-full lg:w-[150px] h-12 sm:h-full flex flex-row sm:flex-col sm:items-center justify-between z-[999] font-jost-regular bg-dark-violet shadow-2xl text-sm fixed">
+    <div className="w-full lg:w-[150px] h-12 sm:h-full hidden sm:flex flex-row sm:flex-col sm:items-center justify-between z-[999] font-jost-regular bg-dark-violet shadow-2xl text-sm fixed">
       <div className="hidden sm:block sm:absolute top-0">
         <img
           src="/images/logo-apricot.png"
@@ -109,7 +109,7 @@ export const Navbar: FC = () => {
                 <Link to={nav.href} key={`nav-link-${i}`}>
                   <span
                     className={classNames(
-                      'no-underline px-1 cursor-pointer hover:text-[#086370] lowercase w-full text-right',
+                      'no-underline px-1 cursor-pointer hover:text-blue-purple lowercase w-full text-right',
                       nav.active && 'text-link'
                     )}
                   >
