@@ -12,7 +12,7 @@ export const Layout: FC<LayoutProps> = ({ children }) => {
   return (
     <div className="min-h-screen h-auto sm:h-full w-full grid sm:grid-cols-layout bg-seashell bg-[url('/images/hexagons.svg')] bg-repeat bg-contain bg-fixed">
       <Seo
-        title="ManyanaDev"
+        title="Home"
         description="Bespoke development agency for bringing your vision to life"
         article={false}
         path="/"
