@@ -34,8 +34,8 @@ export const CookieBanner: FC = () => {
 
   return (
     <div
-      className={`fixed bottom-0 w-full left-0 right-0 bg-[#983A5D] text-white z-50 ${
-        consent ? 'hiddenx' : ''
+      className={`fixed bottom-5 w-[90%] left-1/2 -translate-x-1/2 bg-dark-violet border-black border-2 text-white z-front text-sm ${
+        consent ? 'hidden' : ''
       }`}
     >
       <div className="px-6 py-10">{t('cookies')}</div>
@@ -49,18 +49,18 @@ export const CookieBanner: FC = () => {
       </div>
       <div className="flex items-center justify-center space-x-5 bg-black/20 p-3">
         <button
-          onClick={e => denyCookie()}
-          className="py-1 px-4 bg-red-600 rounded-md"
-        >
-          Deny All
-        </button>
-        <button
           onClick={() => {
             acceptCookie();
           }}
-          className="py-1 px-4 bg-green-600 rounded-md"
+          className="py-1 px-4 bg-green-800 rounded-md"
         >
           Accept All
+        </button>
+        <button
+          onClick={e => denyCookie()}
+          className="py-1 px-4 bg-red-800 rounded-md"
+        >
+          Deny All
         </button>
       </div>
     </div>

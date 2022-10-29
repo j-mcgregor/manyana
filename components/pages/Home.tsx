@@ -2,17 +2,15 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-console */
 /* eslint-disable sonarjs/no-duplicate-string */
-
 import classNames from 'classnames';
 import { hasCookie } from 'cookies-next';
 import { useTranslations } from 'next-intl';
 import React, { FC, useEffect, useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { BsChevronDown, BsChevronUp } from 'react-icons/bs';
 import { Background, Parallax } from 'react-parallax';
 import { Element } from 'react-scroll';
-import Swiper, { Navigation, Pagination } from 'swiper';
-import { Swiper as SwiperReact, SwiperSlide } from 'swiper/react';
+import Swiper from 'swiper';
+
 import { Showcase } from '../sections/Showcase';
 
 export interface ContactForm {
@@ -24,30 +22,16 @@ export interface ContactForm {
 
 export const Home = () => {
   const t = useTranslations();
+  const [submitting, setSubmitting] = useState(false);
+
   const { register, handleSubmit, formState } = useForm<ContactForm>();
   const [message, setMessage] = useState<{
     success: boolean;
     message: string;
   } | null>(null);
 
-  const [swiper, setSwiper] = useState<Swiper>();
-
-  const prevRef = useRef<HTMLDivElement>(null);
-  const nextRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (swiper?.params) {
-      console.log('Swiper instance:', swiper);
-      // @ts-ignore
-      swiper.params.navigation.prevEl = prevRef.current;
-      // @ts-ignore
-      swiper.params.navigation.nextEl = nextRef.current;
-      swiper.navigation.init();
-      swiper.navigation.update();
-    }
-  }, [swiper]);
-
   const handleFormSubmit = handleSubmit(async data => {
+    setSubmitting(true);
     const consent = hasCookie('estore-consent');
 
     try {
@@ -77,6 +61,8 @@ export const Home = () => {
         success: false,
         message: t('landing.contact.submission_error_message')
       });
+    } finally {
+      setSubmitting(false);
     }
   });
 
@@ -424,10 +410,14 @@ export const Home = () => {
                   ) : (
                     <button
                       className={classNames(
-                        'flex items-center justify-center bg-dark-violet text-apricot disabled:text-gray-600 text-xl border-[1px] disabled:border-gray-300 w-40 h-12 rounded-full disabled:bg-gray-300 hover:disabled:bg-gray-300 hover:bg-apricot hover:text-dark-violet cursor-pointer font-roboto-bold duration-100 mt-5'
+                        'flex items-center justify-center text-apricot disabled:text-gray-600 text-xl border-[1px] disabled:border-gray-300 w-40 h-12 rounded-full disabled:bg-gray-300 hover:disabled:bg-gray-300 hover:bg-apricot hover:text-dark-violet cursor-pointer font-roboto-bold duration-100 mt-5',
+                        submitting ? 'bg-dark-violet/50' : 'bg-dark-violet'
                       )}
+                      disabled={submitting}
                     >
-                      {t('landing.contact.submit')}
+                      {submitting
+                        ? 'Submitting...'
+                        : t('landing.contact.submit')}
                     </button>
                   )}
                 </div>
