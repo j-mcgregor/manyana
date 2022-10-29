@@ -70,11 +70,11 @@ export const Home = () => {
     <div className="w-full">
       <div className="h-full md:h-screen w-full flex flex-col md:flex-row">
         <div className="w-full md:w-1/2 flex flex-col text-center md:text-left md:items-start justify-center p-20">
-          <div className="text-3xl md:text-4xl font-jost-bold text-puce">
-            This is
-          </div>
           <div className="text-4xl md:text-[8em] font-koulen text-center md:text-left leading-tight text-dark-violet">
             Manyana <span className="text-apricot">Dev</span>.
+          </div>
+          <div className="text-3xl md:text-xl font-koulen text-light-violet">
+            Bespoke development agency to bring your vision to life
           </div>
         </div>
         <div className="w-full md:w-1/2 hidden md:flex flex-col items-center justify-center relative">

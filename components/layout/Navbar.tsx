@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable sonarjs/cognitive-complexity */
 /* eslint-disable sonarjs/no-duplicate-string */
 /* eslint-disable no-case-declarations */
@@ -53,6 +54,13 @@ export const Navbar: FC = () => {
 
   return (
     <div className="w-full lg:w-[150px] h-12 sm:h-full flex flex-row sm:flex-col sm:items-center justify-between z-[999] font-jost-regular bg-dark-violet shadow-2xl text-sm fixed">
+      <div className="hidden sm:block sm:absolute top-0">
+        <img
+          src="/images/logo-apricot.png"
+          alt="logo"
+          className="w-16 h-16 object-contain mt-10"
+        />
+      </div>
       {/* links:sm */}
       <div className="hidden sm:flex flex-col items-start justify-center w-full h-full px-5 py-2 space-y-10">
         {navLinks.map((nav, i) => {
