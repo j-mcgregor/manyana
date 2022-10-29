@@ -5,6 +5,7 @@ import { IntlError, NextIntlProvider } from 'next-intl';
 import { AppProps } from 'next/app';
 import SwiperCore, { Autoplay } from 'swiper';
 import Script from 'next/script';
+import { Analytics } from '@vercel/analytics/react';
 
 function MyApp({ Component, pageProps }: AppProps) {
   SwiperCore.use([Autoplay]);
@@ -30,6 +31,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       />
       {/* @ts-ignore */}
       <Component {...pageProps} />
+      <Analytics />
     </NextIntlProvider>
   );
 }
