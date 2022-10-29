@@ -21,7 +21,7 @@ export const Layout: FC<LayoutProps> = ({ children }) => {
       <div></div>
       <div className="text-center w-full">{children}</div>
       {/* <Footer /> */}
-      <CookieBanner />
+      {/* <CookieBanner /> */}
     </div>
   );
 };
