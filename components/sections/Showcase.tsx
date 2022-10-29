@@ -17,16 +17,18 @@ export const ShowcaseCard: FC<{
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="text-light-violet text-xl uppercase flex items-center hover:scale-105 duration-200 bg-white/80 mx-10 p-10 rounded-md shadow-md hover:shadow-xl"
+      className="text-light-violet text-xl uppercase flex items-center hover:scale-105 duration-200 bg-white/80 mx-0 md:mx-10 p-2 md:p-10 rounded-md shadow-md hover:shadow-xl"
     >
-      <div className="w-full text-left md:text-centerx font-koulen space-y-10">
-        <div className="flex items-center justify-between">
+      <div className="w-full text-left font-koulen space-y-10">
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between">
           <div className="text-dark-violet text-3xl uppercase">{title}</div>
           <div className="font-jost-regular text-blue-purple text-base">
             {type}
           </div>
         </div>
-        <div className="font-jost-regular text-sm">{description}</div>
+        <div className="font-jost-regular text-sm pr-10 md:pr-0">
+          {description}
+        </div>
       </div>
     </a>
   );

@@ -69,11 +69,11 @@ export const Home = () => {
   return (
     <div className="w-full">
       <div className="h-full md:h-screen w-full flex flex-col md:flex-row">
-        <div className="w-full md:w-1/2 flex flex-col text-center md:text-left md:items-start justify-center p-20">
-          <div className="text-4xl md:text-[8em] font-koulen text-center md:text-left leading-tight text-dark-violet">
+        <div className="w-full md:w-1/2 flex flex-col text-center md:text-left md:items-start justify-center py-16 md:p-20">
+          <div className="text-7xl md:text-[8em] font-koulen text-center md:text-left leading-tight text-dark-violet">
             Manyana <span className="text-apricot">Dev</span>.
           </div>
-          <div className="text-3xl md:text-xl font-koulen text-light-violet">
+          <div className="text-lg md:text-xl font-koulen text-light-violet">
             Bespoke development agency to bring your vision to life
           </div>
         </div>

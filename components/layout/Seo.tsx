@@ -14,7 +14,7 @@ type SEOProps = {
 const Seo = ({ title, description, article, path }: SEOProps) => {
   const metaTitle = title ? `${title} | ${config.title}` : config.title;
   const metaDescription = description || config.description;
-  const metaImage = `${config.URL}${ogImage.src}`; // placeholder logo here
+  const metaImage = `${config.URL}/images/logo-apricot-with-background.png`; // placeholder logo here
 
   return (
     <Head>
