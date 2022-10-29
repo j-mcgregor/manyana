@@ -1,0 +1,64 @@
+{
+  "showcase": [
+    {
+      "name": "MDD Solutions",
+      "type": "full site",
+      "description": "First phase of a recruitment-board project based in Watford, UK",
+      "href": "https://mdd-solutions.co.uk/"
+    },
+    {
+      "name": "Connexos Design",
+      "type": "full site",
+      "description": "E-Commerce store for a Montreal-based knitwear company",
+      "href": "https://connexosdesign.com/"
+    },
+    {
+      "name": "Folk Photography",
+      "type": "full site",
+      "description": "Stylish portfolio page for photography company based Wokingham, UK",
+      "href": "https://folk-photography.co.uk/"
+    },
+    {
+      "name": "Espace Mo",
+      "type": "full site",
+      "description": "Humble static site for a Quebec-based Osteopathy clinic",
+      "href": "https://espace-mo.vercel.app/"
+    },
+    {
+      "name": "E-Store Labs",
+      "type": "contract",
+      "description": "Startup introducing products on e-commerce platforms",
+      "href": "https://www.estorelabs.com/"
+    },
+    {
+      "name": "Wiserfunding",
+      "type": "contract",
+      "description": "UK-based startup for analysing company risk for investing",
+      "href": "https://risk.wiserfunding.com"
+    },
+    {
+      "name": "One Tribe",
+      "type": "contract",
+      "description": "E-Commerce middleman for saving the rainforest",
+      "href": "https://app.onetribeglobal.com/"
+    },
+    {
+      "name": "Dezaan",
+      "type": "contract",
+      "description": "Chocolate manufacturing and suppliers",
+      "href": "https://dezaan.com/en/"
+    },
+    {
+      "name": "Sports Icon",
+      "type": "contract",
+      "description": "NFT marketplace specialising in iconic sports moments",
+      "href": "https://sportsicon.com/"
+    },
+    {
+      "name": "Circle of Intrapreneurs",
+      "type": "full site",
+      "description": "Simple social for a global group of like-minded intrapreneurs",
+      "href": "https://www.circleofintrapreneurs.com/"
+    }
+  ]
+}

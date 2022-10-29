@@ -52,7 +52,7 @@ export const Navbar: FC = () => {
   ];
 
   return (
-    <div className="w-full sm:w-[150px] h-12 sm:h-full flex flex-row sm:flex-col sm:items-center justify-between z-[999] font-jost-bold bg-dark-violet shadow-2xl text-sm fixed">
+    <div className="w-full lg:w-[150px] h-12 sm:h-full flex flex-row sm:flex-col sm:items-center justify-between z-[999] font-jost-bold bg-dark-violet shadow-2xl text-sm fixed">
       {/* links:sm */}
       <div className="hidden sm:flex flex-col items-start justify-center w-full h-full px-5 py-2 space-y-10">
         {navLinks.map((nav, i) => {

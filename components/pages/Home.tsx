@@ -2,13 +2,18 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-console */
 /* eslint-disable sonarjs/no-duplicate-string */
+
 import classNames from 'classnames';
 import { hasCookie } from 'cookies-next';
 import { useTranslations } from 'next-intl';
-import React, { FC, useState } from 'react';
+import React, { FC, useEffect, useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { BsChevronDown, BsChevronUp } from 'react-icons/bs';
 import { Background, Parallax } from 'react-parallax';
 import { Element } from 'react-scroll';
+import Swiper, { Navigation, Pagination } from 'swiper';
+import { Swiper as SwiperReact, SwiperSlide } from 'swiper/react';
+import { Showcase } from '../sections/Showcase';
 
 export interface ContactForm {
   fullName: string;
@@ -24,6 +29,23 @@ export const Home = () => {
     success: boolean;
     message: string;
   } | null>(null);
+
+  const [swiper, setSwiper] = useState<Swiper>();
+
+  const prevRef = useRef<HTMLDivElement>(null);
+  const nextRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (swiper?.params) {
+      console.log('Swiper instance:', swiper);
+      // @ts-ignore
+      swiper.params.navigation.prevEl = prevRef.current;
+      // @ts-ignore
+      swiper.params.navigation.nextEl = nextRef.current;
+      swiper.navigation.init();
+      swiper.navigation.update();
+    }
+  }, [swiper]);
 
   const handleFormSubmit = handleSubmit(async data => {
     const consent = hasCookie('estore-consent');
@@ -224,83 +246,7 @@ export const Home = () => {
       {/* ============================ */}
 
       <Element name="showcase" />
-      <div className="h-full md:h-screen w-full flex flex-col md:flex-row">
-        <div className="w-full md:w-1/2 flex flex-col items-start justify-center p-5 md:p-20 text-center md:text-right">
-          <div className="text-4xl md:text-6xl font-koulen leading-tight text-apricot w-full">
-            Showcase
-          </div>
-          <div className="text-2xl md:text-4xl font-koulen leading-tight text-light-violet w-full">
-            Contracting, consultation and from scratch
-          </div>
-        </div>
-        <div className="w-full md:w-1/2 h-full flex flex-col items-start justify-center px-4 md:px-20 text-left">
-          <div
-            className="space-y-10 h-auto md:h-4/5 w-full flex flex-col items-center justify-center overflow-y-scroll relative fade-box py-10 md:py-40"
-            id="showcase-scroll"
-          >
-            <ShowcaseCard
-              title="Circle of Intrapreneurs"
-              type="from-scratch"
-              description="Simple social for a global group of like-minded intrapreneurs"
-              href=""
-            />
-            <ShowcaseCard
-              title="Connexos Design"
-              type="from-scratch"
-              description="E-Commerce store for a Montreal-based knitwear company"
-              href=""
-            />
-            <ShowcaseCard
-              title="Espace Mo"
-              type="from-scratch"
-              description="Humble static site for a Quebec-based Osteopathy clinic"
-              href=""
-            />
-            <ShowcaseCard
-              title="MDD Solutions"
-              type="from-scratch"
-              description="First phase of a recruitment-board project based in Watford, UK"
-              href=""
-            />
-            <ShowcaseCard
-              title="E-Store Labs"
-              type="consultation"
-              description="Startup introducing products on e-commerce platforms"
-              href=""
-            />
-            <ShowcaseCard
-              title="Wiserfunding"
-              type="contracting"
-              description="UK-based startup for analysing company risk for investing"
-              href=""
-            />
-            <ShowcaseCard
-              title="One Tribe"
-              type="contracting"
-              description="E-Commerce middleman for saving the rainforest"
-              href=""
-            />
-            <ShowcaseCard
-              title="Dezaan"
-              type="contracting"
-              description="Chocolate manufacturing and suppliers"
-              href=""
-            />
-            <ShowcaseCard
-              title="Folk Photography"
-              type="from-scratch"
-              description="Stylish portfolio page for photography company based Wokingham, UK"
-              href=""
-            />
-            <ShowcaseCard
-              title="Sports Icon"
-              type="contracting"
-              description="NFT marketplace specialising in iconic sports moments"
-              href=""
-            />
-          </div>
-        </div>
-      </div>
+      <Showcase />
 
       {/* ============================ */}
       {/* CONTACT =================== */}
@@ -332,6 +278,32 @@ export const Home = () => {
                 onSubmit={handleFormSubmit}
               >
                 <div className="w-full flex flex-col space-y-5 items-center justify-center">
+                  <div className="honey hidden">
+                    <label htmlFor="name">Name</label>
+                    <input
+                      id="name"
+                      name="name"
+                      type="text"
+                      autoComplete="off"
+                    />
+                  </div>
+                  <div className="honey hidden">
+                    <label htmlFor="email">Email</label>
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      autoComplete="off"
+                    />
+                  </div>
+                  <div className="honey hidden">
+                    <label htmlFor="message">Message</label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      autoComplete="off"
+                    ></textarea>
+                  </div>
                   <div className="flex flex-col relative w-full">
                     <label htmlFor="full_name" className="flex flex-col w-full">
                       <span
@@ -464,32 +436,6 @@ export const Home = () => {
           </div>
         </div>
       </Parallax>
-    </div>
-  );
-};
-
-type ShowcaseType = 'from-scratch' | 'contracting' | 'consultation';
-
-export const ShowcaseCard: FC<{
-  title: string;
-  type: ShowcaseType;
-  description: string;
-  href: string;
-}> = ({ title, type, description, href }) => {
-  return (
-    <div className="w-full text-left md:text-center">
-      <a
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-light-violet text-xl uppercase font-roboto-bold hover:text-apricot"
-      >
-        {title}
-      </a>
-      <div className="text-blue-purple text-sm uppercase font-roboto-bold">
-        {type}
-      </div>
-      <div className="font-roboto-light text-sm">{description}</div>
     </div>
   );
 };

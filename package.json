@@ -30,13 +30,13 @@
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "react-hook-form": "^7.29.0",
-    "react-icons": "^4.4.0",
+    "react-icons": "^4.6.0",
     "react-parallax": "^3.5.1",
     "react-scroll": "^1.8.8",
     "react-timeago": "^6.2.1",
     "recoil": "^0.7.0",
     "semantic-release": "^19.0.5",
-    "swiper": "^8.4.2",
+    "swiper": "^8.4.4",
     "swr": "^1.2.2"
   },
   "devDependencies": {

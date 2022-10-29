@@ -1,3 +1,4 @@
+import 'swiper/css/bundle';
 import '../styles/globals.css';
 
 import { IntlError, NextIntlProvider } from 'next-intl';
