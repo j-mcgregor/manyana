@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/cognitive-complexity */
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-console */
@@ -9,7 +10,6 @@ import React, { FC, useEffect, useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Background, Parallax } from 'react-parallax';
 import { Element } from 'react-scroll';
-import Swiper from 'swiper';
 
 import { Showcase } from '../sections/Showcase';
 
