@@ -17,9 +17,9 @@ export const ShowcaseCard: FC<{
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="text-light-violet text-xl uppercase flex items-center hover:scale-105 duration-200 bg-white/80 mx-0 md:mx-10 p-2 md:p-10 rounded-md shadow-md hover:shadow-xl"
+      className="text-light-violet text-xl uppercase flex items-center hover:scale-105 duration-200 bg-white/80 mx-0 md:mx-10 p-2 md:p-4 rounded-md shadow-md hover:shadow-xl"
     >
-      <div className="w-full text-left font-koulen space-y-10">
+      <div className="w-full text-left font-koulen space-y-10 border-[1px] border-apricot p-2 md:p-5 rounded-md">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between">
           <div className="text-dark-violet text-3xl uppercase">{title}</div>
           <div className="font-jost-regular text-blue-purple text-base">
@@ -58,7 +58,7 @@ export const Showcase = () => {
           Showcase
         </div>
         <div className="text-2xl md:text-4xl font-koulen leading-tight text-light-violet w-full">
-          Contracting, consultation and full site
+          Contracting, consultation and full project development
         </div>
       </div>
       <div className="w-full md:w-1/2 h-full flex flex-col items-start justify-center px-4 md:px-20 text-left">
