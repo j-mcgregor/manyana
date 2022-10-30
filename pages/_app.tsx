@@ -11,15 +11,16 @@ function MyApp({ Component, pageProps }: AppProps) {
   SwiperCore.use([Autoplay]);
 
   return (
-    <NextIntlProvider
-      messages={pageProps.messages || {}}
-      onError={(_: IntlError) => null}
-    >
-      <Script
-        id="gtag"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
+    <>
+      <NextIntlProvider
+        messages={pageProps.messages || {}}
+        onError={(_: IntlError) => null}
+      >
+        <Script
+          id="gtag"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -27,12 +28,13 @@ function MyApp({ Component, pageProps }: AppProps) {
                       j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
                       })(window,document,'script','dataLayer','GTM-XXXXXXX');`
-        }}
-      />
-      {/* @ts-ignore */}
-      <Component {...pageProps} />
+          }}
+        />
+        {/* @ts-ignore */}
+        <Component {...pageProps} />
+      </NextIntlProvider>
       <Analytics />
-    </NextIntlProvider>
+    </>
   );
 }
 
