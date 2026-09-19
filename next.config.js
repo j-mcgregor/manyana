@@ -1,3 +1,5 @@
+const NEW_SITE_URL = 'https://j-mcgregor.manyana.io';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -9,7 +11,23 @@ const nextConfig = {
     // a non-locale prefixed path e.g. `/hello`
     defaultLocale: 'en'
   },
-  experimental: { images: { layoutRaw: true } }
+  experimental: { images: { layoutRaw: true } },
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: NEW_SITE_URL,
+        permanent: false,
+        locale: false
+      },
+      {
+        source: '/:path*',
+        destination: `${NEW_SITE_URL}/:path*`,
+        permanent: false,
+        locale: false
+      }
+    ];
+  }
 };
 
 module.exports = nextConfig;
